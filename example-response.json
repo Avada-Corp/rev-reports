@@ -1,0 +1,331 @@
+{
+  "parentEmail": "trader_master@gmail.com",
+  "period": {
+    "start": 1704067200000,
+    "to": 1704671999999
+  },
+  "referrals": [
+    {
+      "email": "ref_level1_user1@gmail.com",
+      "username": "CryptoTrader2024",
+      "level": 1,
+      "apis": [
+        {
+          "apiName": "Binance_Main",
+          "market": "binance",
+          "pnlHistory": [
+            {
+              "start": 1704067200000,
+              "to": 1704153599999,
+              "pnl": 245.78,
+              "totalBalance": 15000.5,
+              "snapshotTime": 1704153599999
+            },
+            {
+              "start": 1704153600000,
+              "to": 1704239999999,
+              "pnl": -89.32,
+              "totalBalance": 14911.18,
+              "snapshotTime": 1704239999999
+            },
+            {
+              "start": 1704240000000,
+              "to": 1704326399999,
+              "pnl": 156.44,
+              "totalBalance": 15067.62,
+              "snapshotTime": 1704326399999
+            },
+            {
+              "start": 1704326400000,
+              "to": 1704412799999,
+              "pnl": 89.12,
+              "totalBalance": 15156.74,
+              "snapshotTime": 1704412799999
+            },
+            {
+              "start": 1704412800000,
+              "to": 1704499199999,
+              "pnl": -45.67,
+              "totalBalance": 15111.07,
+              "snapshotTime": 1704499199999
+            },
+            {
+              "start": 1704499200000,
+              "to": 1704585599999,
+              "pnl": 203.89,
+              "totalBalance": 15314.96,
+              "snapshotTime": 1704585599999
+            },
+            {
+              "start": 1704585600000,
+              "to": 1704671999999,
+              "pnl": 98.76,
+              "totalBalance": 15413.72,
+              "snapshotTime": 1704671999999
+            }
+          ]
+        },
+        {
+          "apiName": "OKX_Pro",
+          "market": "okx",
+          "pnlHistory": [
+            {
+              "start": 1704067200000,
+              "to": 1704153599999,
+              "pnl": 123.45,
+              "totalBalance": 8500.0,
+              "snapshotTime": 1704153599999
+            },
+            {
+              "start": 1704153600000,
+              "to": 1704239999999,
+              "pnl": 67.89,
+              "totalBalance": 8567.89,
+              "snapshotTime": 1704239999999
+            },
+            {
+              "start": 1704240000000,
+              "to": 1704326399999,
+              "pnl": -34.12,
+              "totalBalance": 8533.77,
+              "snapshotTime": 1704326399999
+            },
+            {
+              "start": 1704326400000,
+              "to": 1704412799999,
+              "pnl": 89.23,
+              "totalBalance": 8623.0,
+              "snapshotTime": 1704412799999
+            },
+            {
+              "start": 1704412800000,
+              "to": 1704499199999,
+              "pnl": 45.67,
+              "totalBalance": 8668.67,
+              "snapshotTime": 1704499199999
+            },
+            {
+              "start": 1704499200000,
+              "to": 1704585599999,
+              "pnl": -12.34,
+              "totalBalance": 8656.33,
+              "snapshotTime": 1704585599999
+            },
+            {
+              "start": 1704585600000,
+              "to": 1704671999999,
+              "pnl": 78.9,
+              "totalBalance": 8735.23,
+              "snapshotTime": 1704671999999
+            }
+          ]
+        }
+      ],
+      "totalPnl": 1017.68
+    },
+    {
+      "email": "ref_level1_user2@outlook.com",
+      "username": "DayTraderPro",
+      "level": 1,
+      "apis": [
+        {
+          "apiName": "Bybit_Spot",
+          "market": "bybit",
+          "pnlHistory": [
+            {
+              "start": 1704067200000,
+              "to": 1704153599999,
+              "pnl": 89.45,
+              "totalBalance": 5200.3,
+              "snapshotTime": 1704153599999
+            },
+            {
+              "start": 1704153600000,
+              "to": 1704239999999,
+              "pnl": -23.67,
+              "totalBalance": 5176.63,
+              "snapshotTime": 1704239999999
+            },
+            {
+              "start": 1704240000000,
+              "to": 1704326399999,
+              "pnl": 167.89,
+              "totalBalance": 5344.52,
+              "snapshotTime": 1704326399999
+            },
+            {
+              "start": 1704326400000,
+              "to": 1704412799999,
+              "pnl": 45.23,
+              "totalBalance": 5389.75,
+              "snapshotTime": 1704412799999
+            },
+            {
+              "start": 1704412800000,
+              "to": 1704499199999,
+              "pnl": -78.91,
+              "totalBalance": 5310.84,
+              "snapshotTime": 1704499199999
+            },
+            {
+              "start": 1704499200000,
+              "to": 1704585599999,
+              "pnl": 234.56,
+              "totalBalance": 5545.4,
+              "snapshotTime": 1704585599999
+            },
+            {
+              "start": 1704585600000,
+              "to": 1704671999999,
+              "pnl": 12.78,
+              "totalBalance": 5558.18,
+              "snapshotTime": 1704671999999
+            }
+          ]
+        }
+      ],
+      "totalPnl": 447.33
+    },
+    {
+      "email": "subrefer_level2@yahoo.com",
+      "username": "ScalpingBot",
+      "level": 2,
+      "apis": [
+        {
+          "apiName": "Binance_Sub",
+          "market": "binance",
+          "pnlHistory": [
+            {
+              "start": 1704067200000,
+              "to": 1704153599999,
+              "pnl": 45.67,
+              "totalBalance": 3400.0,
+              "snapshotTime": 1704153599999
+            },
+            {
+              "start": 1704153600000,
+              "to": 1704239999999,
+              "pnl": 23.45,
+              "totalBalance": 3423.45,
+              "snapshotTime": 1704239999999
+            },
+            {
+              "start": 1704240000000,
+              "to": 1704326399999,
+              "pnl": -12.34,
+              "totalBalance": 3411.11,
+              "snapshotTime": 1704326399999
+            },
+            {
+              "start": 1704326400000,
+              "to": 1704412799999,
+              "pnl": 67.89,
+              "totalBalance": 3479.0,
+              "snapshotTime": 1704412799999
+            },
+            {
+              "start": 1704412800000,
+              "to": 1704499199999,
+              "pnl": 34.56,
+              "totalBalance": 3513.56,
+              "snapshotTime": 1704499199999
+            },
+            {
+              "start": 1704499200000,
+              "to": 1704585599999,
+              "pnl": -8.91,
+              "totalBalance": 3504.65,
+              "snapshotTime": 1704585599999
+            },
+            {
+              "start": 1704585600000,
+              "to": 1704671999999,
+              "pnl": 78.23,
+              "totalBalance": 3582.88,
+              "snapshotTime": 1704671999999
+            }
+          ]
+        }
+      ],
+      "totalPnl": 228.55
+    },
+    {
+      "email": "third_level_ref@gmail.com",
+      "username": null,
+      "level": 3,
+      "apis": [
+        {
+          "apiName": "MEXC_Auto",
+          "market": "mexc",
+          "pnlHistory": [
+            {
+              "start": 1704067200000,
+              "to": 1704153599999,
+              "pnl": 12.34,
+              "totalBalance": 1200.0,
+              "snapshotTime": 1704153599999
+            },
+            {
+              "start": 1704153600000,
+              "to": 1704239999999,
+              "pnl": 8.76,
+              "totalBalance": 1208.76,
+              "snapshotTime": 1704239999999
+            },
+            {
+              "start": 1704240000000,
+              "to": 1704326399999,
+              "pnl": -5.43,
+              "totalBalance": 1203.33,
+              "snapshotTime": 1704326399999
+            },
+            {
+              "start": 1704326400000,
+              "to": 1704412799999,
+              "pnl": 23.45,
+              "totalBalance": 1226.78,
+              "snapshotTime": 1704412799999
+            },
+            {
+              "start": 1704412800000,
+              "to": 1704499199999,
+              "pnl": 15.67,
+              "totalBalance": 1242.45,
+              "snapshotTime": 1704499199999
+            },
+            {
+              "start": 1704499200000,
+              "to": 1704585599999,
+              "pnl": 7.89,
+              "totalBalance": 1250.34,
+              "snapshotTime": 1704585599999
+            },
+            {
+              "start": 1704585600000,
+              "to": 1704671999999,
+              "pnl": 19.23,
+              "totalBalance": 1269.57,
+              "snapshotTime": 1704671999999
+            }
+          ]
+        }
+      ],
+      "totalPnl": 81.91
+    },
+    {
+      "email": "inactive_referral@hotmail.com",
+      "username": "SleepingTrader",
+      "level": 1,
+      "apis": [
+        {
+          "apiName": "Gate_io_Main",
+          "market": "gate",
+          "pnlHistory": []
+        }
+      ],
+      "totalPnl": 0
+    }
+  ],
+  "totalReferrals": 5,
+  "totalPnl": 1775.47
+}
