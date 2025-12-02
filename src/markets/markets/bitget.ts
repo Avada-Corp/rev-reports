@@ -210,15 +210,16 @@ export class Bitget extends Exchange {
     return {
       status: true,
       message: "success",
-      data: orders.data.entrustedList.map((o) => ({
-        symbol: o.symbol,
-        side: o.side === "buy" ? Side.Long : Side.Short,
-        size: o.size,
-        price: o.price,
-        leverage: o.leverage,
-        orderId: o.orderId,
-        amount: Number(o.price) * Number(o.size)
-      }))
+      data:
+        orders.data.entrustedList?.map((o) => ({
+          symbol: o.symbol,
+          side: o.side === "buy" ? Side.Long : Side.Short,
+          size: o.size,
+          price: o.price,
+          leverage: o.leverage,
+          orderId: o.orderId,
+          amount: Number(o.price) * Number(o.size)
+        })) || []
     };
   }
 
