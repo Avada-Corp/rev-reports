@@ -598,7 +598,7 @@ export class MarketsController {
     };
   }
 
-  // @Cron(CronExpression.EVERY_DAY_AT_8AM)
+  @Cron(CronExpression.EVERY_DAY_AT_8AM)
   @Get("/checkBybitKeys")
   async checkBybitKeys() {
     return await this.marketsService.checkBybitKeys();
