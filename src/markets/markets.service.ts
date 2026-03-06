@@ -1002,8 +1002,8 @@ export class MarketsService {
   }
 
   async cancelOrder(apiRevId: string, symbol: string, orderId: string) {
+    console.log("cancelOrder received orderId:", orderId, "type:", typeof orderId);
     const api = await this.api.getApiById(apiRevId);
-    console.log("api: ", api);
     if (api == null) {
       return { status: false, error: "Api not found" };
     }
