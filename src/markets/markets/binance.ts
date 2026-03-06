@@ -5,6 +5,8 @@ import { Balance, TransferHistory } from "../interfaces/index";
 import { Logger } from "@nestjs/common";
 import { sendImportantMessageAsync, timeout } from "../helpers";
 import { IncomeHistory, IncomeType, NewFuturesOrderParams, USDMClient } from "binance";
+import * as crypto from "crypto";
+import axios from "axios";
 
 interface Transfer {
   symbol: string;
@@ -383,31 +385,45 @@ export class Binance extends Exchange {
       return { status: false, message: error.message };
     }
   }
+  private signedRequest(params: Record<string, string>): string {
+    const query = new URLSearchParams({ ...params, timestamp: String(Date.now()), recvWindow: "5000" }).toString();
+    const signature = crypto.createHmac("sha256", this.secret).update(query).digest("hex");
+    return `${query}&signature=${signature}`;
+  }
+
   async getOpenOrders(_pairs: string[] = []): Promise<{ status: boolean; message: string; data: OpenOrder[] }> {
-    const orders = await this.usdmClient.getAllOpenOrders();
-    orders.forEach((o) => console.log("getOpenOrders raw orderId:", o.orderId, "type:", typeof o.orderId));
+    const qs = this.signedRequest({});
+    const response = await axios.get(`https://fapi.binance.com/fapi/v1/openOrders?${qs}`, {
+      headers: { "X-MBX-APIKEY": this.key },
+      transformResponse: [(data: string) => JSON.parse(data.replace(/"orderId":(\d{15,})/g, '"orderId":"$1"'))]
+    });
+    const orders = response.data;
     return {
       status: true,
       message: "success",
-      data: orders.map((o) => ({
+      data: orders.map((o: any) => ({
         symbol: o.symbol,
         price: o.price,
         side: o.side === "BUY" ? Side.Long : Side.Short,
         amount: o.origQty,
         leverage: 0,
-        orderId: String(o.orderId)
+        orderId: o.orderId
       }))
     };
   }
+
   async cancelOrder(symbol: string, orderId: string): Promise<{ status: boolean; message: string }> {
     console.log("cancelOrderBinance: ", symbol, orderId);
     try {
-      const order = await this.usdmClient.cancelOrder({ symbol, orderId: orderId as any });
-      console.log("order: ", order);
-      return { status: true, message: order.status };
+      const qs = this.signedRequest({ symbol, orderId });
+      const response = await axios.delete(`https://fapi.binance.com/fapi/v1/order?${qs}`, {
+        headers: { "X-MBX-APIKEY": this.key }
+      });
+      console.log("cancelOrder response:", response.data);
+      return { status: true, message: response.data.status };
     } catch (error) {
-      console.error("cancelOrder error: ", error);
-      return { status: false, message: error.message };
+      console.error("cancelOrder error: ", error.response?.data || error.message);
+      return { status: false, message: error.response?.data?.msg || error.message };
     }
   }
   async getUserInfo(): Promise<number> {
