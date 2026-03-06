@@ -176,7 +176,7 @@ export class Huobi extends Exchange {
             side: o.side === "buy" ? Side.Long : Side.Short,
             amount: o.amount,
             leverage: o.info.lever_rate,
-            orderId: o.id
+            orderId: String(o.id)
           }))
         );
       } catch (error) {

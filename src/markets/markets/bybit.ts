@@ -299,7 +299,7 @@ export class Bybit extends Exchange {
             side: o.side === "Buy" ? Side.Long : Side.Short,
             amount: o.qty,
             leverage: o.isLeverage,
-            orderId: o.orderId
+            orderId: String(o.orderId)
           })) || []
       };
     } catch (error) {

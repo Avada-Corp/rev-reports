@@ -242,7 +242,7 @@ export class Okx extends Exchange {
           side: o.side === "buy" ? Side.Long : Side.Short,
           amount: o.sz,
           leverage: o.lever,
-          orderId: o.ordId
+          orderId: String(o.ordId)
         }))
       };
     } catch (error) {

@@ -394,7 +394,7 @@ export class Binance extends Exchange {
         side: o.side === "BUY" ? Side.Long : Side.Short,
         amount: o.origQty,
         leverage: 0,
-        orderId: o.orderId
+        orderId: String(o.orderId)
       }))
     };
   }

@@ -217,7 +217,7 @@ export class Bitget extends Exchange {
           size: o.size,
           price: o.price,
           leverage: o.leverage,
-          orderId: o.orderId,
+          orderId: String(o.orderId),
           amount: Number(o.price) * Number(o.size)
         })) || []
     };
