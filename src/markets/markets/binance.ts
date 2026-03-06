@@ -385,6 +385,7 @@ export class Binance extends Exchange {
   }
   async getOpenOrders(_pairs: string[] = []): Promise<{ status: boolean; message: string; data: OpenOrder[] }> {
     const orders = await this.usdmClient.getAllOpenOrders();
+    orders.forEach((o) => console.log("getOpenOrders raw orderId:", o.orderId, "type:", typeof o.orderId));
     return {
       status: true,
       message: "success",
