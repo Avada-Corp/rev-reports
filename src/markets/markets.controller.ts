@@ -364,7 +364,7 @@ export class MarketsController {
 
   @Post("/cancelOrder")
   async cancelOrder(@Body() data: CancelOrderRequest) {
-    return await this.marketsService.cancelOrder(data.apiRevId, data.symbol, data.orderId);
+    return await this.marketsService.cancelOrder(data.apiRevId, data.symbol, String(data.orderId));
   }
 
   @Post("/cancelAllOrders")

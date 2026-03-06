@@ -401,7 +401,7 @@ export class Binance extends Exchange {
   async cancelOrder(symbol: string, orderId: string): Promise<{ status: boolean; message: string }> {
     console.log("cancelOrderBinance: ", symbol, orderId);
     try {
-      const order = await this.usdmClient.cancelOrder({ symbol, orderId: Number(orderId) });
+      const order = await this.usdmClient.cancelOrder({ symbol, orderId: orderId as any });
       console.log("order: ", order);
       return { status: true, message: order.status };
     } catch (error) {
